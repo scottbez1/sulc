@@ -1,0 +1,12 @@
+SULC is the Simple USB LED Controller, by Scott Bezek
+
+
+Based on the ATMega8U2 and TLC5940.
+
+SULC is inspired by:
+- Next Make's NHPLS project (http://next-make.mit.edu/wiki/PartySystem/Overview)
+- Joe Colosimo's ACRIS project (https://github.com/jwcxz/ACRIS/)
+
+SULC uses open-source software:
+- LUFA (http://www.fourwalledcubicle.com/LUFA.php)
+- tlc5940arduino (http://code.google.com/p/tlc5940arduino/)
