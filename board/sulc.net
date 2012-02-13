@@ -1,0 +1,434 @@
+# EESchema Netlist Version 1.1 created  Sunday, February 12, 2012 05:57:39 PM
+(
+ ( /4F36E5BB C1V7 C1 100uF
+  ( A N-000013 )
+  ( C GND )
+ )
+ ( /4F36DD33 C1V7 C2 10uF
+  ( A +5V )
+  ( C GND )
+ )
+ ( /4F36DC74 SM0603_Capa C3 0.1uF
+  ( 1 GND )
+  ( 2 +5V )
+ )
+ ( /4F35DCB8 SM0603_Capa C4 1uF
+  ( 1 GND )
+  ( 2 N-000028 )
+ )
+ ( /4F35DD36 SM0603_Capa C5 20pF
+  ( 1 GND )
+  ( 2 N-000016 )
+ )
+ ( /4F35DD38 SM0603_Capa C6 20pF
+  ( 1 GND )
+  ( 2 N-000015 )
+ )
+ ( /4F36D00F SparkFun-LED-0603 D1 LED
+  ( A N-000022 )
+  ( C N-000006 )
+ )
+ ( /4F36D00C SparkFun-LED-0603 D2 LED
+  ( A N-000038 )
+  ( C N-000005 )
+ )
+ ( /4F36D006 SparkFun-LED-0603 D3 LED
+  ( A N-000036 )
+  ( C N-000004 )
+ )
+ ( /4F36CF5E SparkFun-LED-0603 D4 LED
+  ( A N-000033 )
+  ( C N-000003 )
+ )
+ ( /4F384304 SparkFun-LED-0603 D5 PWR
+  ( A +5V )
+  ( C N-000008 )
+ )
+ ( /4F36C52D SparkFun-PTC-1206 F1 500mA
+  ( 1 N-000017 )
+  ( 2 +5V )
+ )
+ ( /4F36E565 SparkFun-POWER_JACK_PTH J1 LED_PWR
+  ( GND GND )
+  ( GNDB GND )
+  ( PWR N-000013 )
+ )
+ ( /4F36D089 SparkFun-SJ_2S-TRACE J2 HWB
+  ( 1 N-000024 )
+  ( 2 GND )
+ )
+ ( /4F35D670 SparkFun-USB-MINIB P1 USB
+  ( 1 N-000017 )
+  ( 2 N-000018 )
+  ( 3 N-000019 )
+  ( 4 ? )
+  ( 5 GND )
+ )
+ ( /4F36E616 PINTST P2 CONN_1
+  ( 1 N-000013 )
+ )
+ ( /4F36E626 PINTST P3 CONN_1
+  ( 1 N-000013 )
+ )
+ ( /4F36E62B PINTST P4 CONN_1
+  ( 1 N-000013 )
+ )
+ ( /4F36E62F PINTST P5 CONN_1
+  ( 1 N-000013 )
+ )
+ ( /4F36E633 PINTST P6 CONN_1
+  ( 1 N-000013 )
+ )
+ ( /4F36D9C4 pin_array_3x2 P7 ISP
+  ( 1 N-000059 )
+  ( 2 +5V )
+  ( 3 N-000063 )
+  ( 4 N-000014 )
+  ( 5 N-000064 )
+  ( 6 GND )
+ )
+ ( /4F36DE12 PINTST P8 CONN_1
+  ( 1 N-000021 )
+ )
+ ( /4F36DE35 PINTST P9 CONN_1
+  ( 1 N-000051 )
+ )
+ ( /4F36DE40 PINTST P10 CONN_1
+  ( 1 N-000065 )
+ )
+ ( /4F36DE43 PINTST P11 CONN_1
+  ( 1 N-000052 )
+ )
+ ( /4F36DE54 PINTST P12 CONN_1
+  ( 1 N-000066 )
+ )
+ ( /4F36DE56 PINTST P13 CONN_1
+  ( 1 N-000054 )
+ )
+ ( /4F36DF8D PINTST P14 CONN_1
+  ( 1 N-000058 )
+ )
+ ( /4F36DF8C PINTST P15 CONN_1
+  ( 1 N-000043 )
+ )
+ ( /4F36DF8B PINTST P16 CONN_1
+  ( 1 N-000062 )
+ )
+ ( /4F36DF8A PINTST P17 CONN_1
+  ( 1 N-000044 )
+ )
+ ( /4F36DF89 PINTST P18 CONN_1
+  ( 1 N-000061 )
+ )
+ ( /4F36DF88 PINTST P19 CONN_1
+  ( 1 N-000056 )
+ )
+ ( /4F36DFCE PINTST P20 CONN_1
+  ( 1 N-000041 )
+ )
+ ( /4F36DFCF PINTST P21 CONN_1
+  ( 1 N-000007 )
+ )
+ ( /4F36DFD0 PINTST P22 CONN_1
+  ( 1 N-000060 )
+ )
+ ( /4F36DFD1 PINTST P23 CONN_1
+  ( 1 N-000046 )
+ )
+ ( /4F36DFD2 PINTST P24 CONN_1
+  ( 1 N-000048 )
+ )
+ ( /4F36DFD3 PINTST P25 CONN_1
+  ( 1 N-000049 )
+ )
+ ( /4F36BDCF SM0603 R1 10K
+  ( 1 N-000064 )
+  ( 2 +5V )
+ )
+ ( /4F35DC76 SM0603 R2 22
+  ( 1 N-000037 )
+  ( 2 N-000018 )
+ )
+ ( /4F35D6C4 SM0603 R3 22
+  ( 1 N-000030 )
+  ( 2 N-000019 )
+ )
+ ( /4F36D5E6 SM0603 R4 1K
+  ( 1 GND )
+  ( 2 N-000006 )
+ )
+ ( /4F36D5F9 SM0603 R5 1K
+  ( 1 GND )
+  ( 2 N-000005 )
+ )
+ ( /4F36D602 SM0603 R6 1K
+  ( 1 GND )
+  ( 2 N-000004 )
+ )
+ ( /4F36D608 SM0603 R7 1K
+  ( 1 GND )
+  ( 2 N-000003 )
+ )
+ ( /4F36C44B SM0603 R8 330
+  ( 1 N-000047 )
+  ( 2 GND )
+ )
+ ( /4F36BEC8 SM0603 R9 330
+  ( 1 N-000053 )
+  ( 2 GND )
+ )
+ ( /4F36C3CC SM0603 R10 330
+  ( 1 N-000045 )
+  ( 2 GND )
+ )
+ ( /4F3842F9 SM0603 R11 1K
+  ( 1 N-000008 )
+  ( 2 GND )
+ )
+ ( /4F36BD5D SparkFun-TACTILE-SWITCH-1101NE S1 RESET
+  ( 1 GND )
+  ( 2 N-000064 )
+ )
+ ( /4F3732E8 SparkFun-SJ_2S-NO SJ1 MISO
+  ( 1 N-000059 )
+  ( 2 N-000009 )
+ )
+ ( /4F37321A SparkFun-SJ_2S-NO SJ2 MOSI
+  ( 1 N-000014 )
+  ( 2 N-000011 )
+ )
+ ( /4F37325E SparkFun-SJ_2S-NO SJ3 SCK
+  ( 1 N-000063 )
+  ( 2 N-000010 )
+ )
+ ( /4F35E983 tssop-28-thermal TLC1 TLC5940
+  ( 1 N-000051 )
+  ( 2 N-000051 )
+  ( 3 N-000051 )
+  ( 4 N-000065 )
+  ( 5 N-000065 )
+  ( 6 N-000065 )
+  ( 7 N-000052 )
+  ( 8 N-000052 )
+  ( 9 N-000052 )
+  ( 10 N-000066 )
+  ( 11 N-000066 )
+  ( 12 N-000066 )
+  ( 13 N-000054 )
+  ( 14 N-000054 )
+  ( 15 N-000054 )
+  ( 16 N-000020 )
+  ( 17 N-000057 )
+  ( 18 N-000032 )
+  ( 19 +5V )
+  ( 20 N-000053 )
+  ( 21 +5V )
+  ( 22 GND )
+  ( 23 N-000055 )
+  ( 24 N-000025 )
+  ( 25 N-000010 )
+  ( 26 N-000011 )
+  ( 27 GND )
+  ( 28 N-000021 )
+ )
+ ( /4F35E97B tssop-28-thermal TLC2 TLC5940
+  ( 1 N-000043 )
+  ( 2 N-000043 )
+  ( 3 N-000043 )
+  ( 4 N-000062 )
+  ( 5 N-000062 )
+  ( 6 N-000062 )
+  ( 7 N-000044 )
+  ( 8 N-000044 )
+  ( 9 N-000044 )
+  ( 10 N-000061 )
+  ( 11 N-000061 )
+  ( 12 N-000061 )
+  ( 13 N-000056 )
+  ( 14 N-000056 )
+  ( 15 N-000056 )
+  ( 16 N-000029 )
+  ( 17 N-000040 )
+  ( 18 N-000032 )
+  ( 19 +5V )
+  ( 20 N-000045 )
+  ( 21 +5V )
+  ( 22 GND )
+  ( 23 N-000055 )
+  ( 24 N-000025 )
+  ( 25 N-000010 )
+  ( 26 N-000057 )
+  ( 27 GND )
+  ( 28 N-000058 )
+ )
+ ( /4F35E4C5 tssop-28-thermal TLC3 TLC5940
+  ( 1 N-000007 )
+  ( 2 N-000007 )
+  ( 3 N-000007 )
+  ( 4 N-000060 )
+  ( 5 N-000060 )
+  ( 6 N-000060 )
+  ( 7 N-000046 )
+  ( 8 N-000046 )
+  ( 9 N-000046 )
+  ( 10 N-000048 )
+  ( 11 N-000048 )
+  ( 12 N-000048 )
+  ( 13 N-000049 )
+  ( 14 N-000049 )
+  ( 15 N-000049 )
+  ( 16 N-000050 )
+  ( 17 N-000009 )
+  ( 18 N-000032 )
+  ( 19 +5V )
+  ( 20 N-000047 )
+  ( 21 +5V )
+  ( 22 GND )
+  ( 23 N-000055 )
+  ( 24 N-000025 )
+  ( 25 N-000010 )
+  ( 26 N-000040 )
+  ( 27 GND )
+  ( 28 N-000041 )
+ )
+ ( /4F36D945 SparkFun-PAD.02X.02 TP1 PC7
+  ( 1 N-000023 )
+ )
+ ( /4F36D959 SparkFun-PAD.02X.02 TP2 PC4
+  ( 1 N-000027 )
+ )
+ ( /4F36D967 SparkFun-PAD.02X.02 TP3 PC2
+  ( 1 N-000031 )
+ )
+ ( /4F36D98D SparkFun-PAD.02X.02 TP4 PB7
+  ( 1 N-000039 )
+ )
+ ( /4F36D9A5 SparkFun-PAD.02X.02 TP5 PB0
+  ( 1 N-000026 )
+ )
+ ( /4F36D036 SparkFun-PAD.02X.02 TP6 TX
+  ( 1 N-000035 )
+ )
+ ( /4F36D05B SparkFun-PAD.02X.02 TP7 RX
+  ( 1 N-000034 )
+ )
+ ( /4F35CBBD SparkFun-TQFP32-08 U1 ATMEGA8U2AU
+  ( 1 N-000015 )
+  ( 2 N-000016 )
+  ( 3 GND )
+  ( 4 +5V )
+  ( 5 N-000031 )
+  ( 6 N-000032 )
+  ( 7 N-000033 )
+  ( 8 N-000034 )
+  ( 9 N-000035 )
+  ( 10 N-000036 )
+  ( 11 N-000038 )
+  ( 12 N-000022 )
+  ( 13 N-000024 )
+  ( 14 N-000026 )
+  ( 15 N-000063 )
+  ( 16 N-000014 )
+  ( 17 N-000059 )
+  ( 18 N-000020 )
+  ( 19 N-000029 )
+  ( 20 N-000050 )
+  ( 21 N-000039 )
+  ( 22 N-000023 )
+  ( 23 N-000025 )
+  ( 24 N-000064 )
+  ( 25 N-000055 )
+  ( 26 N-000027 )
+  ( 27 N-000028 )
+  ( 28 GND )
+  ( 29 N-000030 )
+  ( 30 N-000037 )
+  ( 31 +5V )
+  ( 32 +5V )
+ )
+ ( /4F35DD00 SparkFun-HC49UP Y1 16MHz
+  ( 1 N-000015 )
+  ( 2 N-000016 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R10
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R11
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
