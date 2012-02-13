@@ -1,13 +1,13 @@
-PCBNEW-LibModule-V1  Sunday, February 12, 2012 07:18:05 PM
+PCBNEW-LibModule-V1  Monday, February 13, 2012 12:40:23 PM
 # encoding utf-8
 $INDEX
 tssop-28-thermal
 $EndINDEX
 $MODULE tssop-28-thermal
-Po 0 0 0 15 4F3856A7 4F38552B ~~
+Po 0 0 0 15 4F394A77 4F394A06 ~~
 Li tssop-28-thermal
 Cd TSSOP-28-thermal
-Sc 4F38552B
+Sc 4F394A06
 AR /4F35E4C5
 Op 0 0 0
 T0 0 200 197 197 0 39 N V 21 N "TLC3"
@@ -216,7 +216,7 @@ $EndPAD
 $PAD
 Sh "22" R 3819 1339 0 0 0
 Dr 0 0 0
-At SMD N 0088FFFF
+At SMD N 0000FFFF
 Ne 2 "GND"
 Po 0 0
 $EndPAD
@@ -224,148 +224,155 @@ $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po -1500 -500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po -1000 -500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po -500 -500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 0 -500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 500 -500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 1000 -500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 1500 -500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po -1500 0
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po -1000 0
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po -500 0
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 0 0
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 500 0
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 1000 0
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 1500 0
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po -1500 500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po -1000 500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po -500 500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 0 500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 500 500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 1000 500
 $EndPAD
 $PAD
 Sh "22" C 122 122 0 0 0
 Dr 118 0 0
 At STD N 0000FFFF
-Ne 0 ""
+Ne 2 "GND"
 Po 1500 500
+$EndPAD
+$PAD
+Sh "22" R 2429 945 0 0 0
+Dr 0 0 0
+At SMD N 00880000
+Ne 0 ""
+Po 0 0
 $EndPAD
 $SHAPE3D
 Na "smd/smd_dil/tssop-28.wrl"
