@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-12-23 BZR 3325)-testing date = Sunday, February 12, 2012 05:57:39 PM
+Cmp-Mod V01 Genere par PcbNew le Monday, February 13, 2012 03:52:17 AM
 
 BeginCmp
 TimeStamp = /4F36E5BB;
@@ -403,49 +403,49 @@ BeginCmp
 TimeStamp = /4F36D945;
 Reference = TP1;
 ValeurCmp = PC7;
-IdModule  = SparkFun-PAD.02X.02;
+IdModule  = pintst;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F36D959;
 Reference = TP2;
 ValeurCmp = PC4;
-IdModule  = SparkFun-PAD.02X.02;
+IdModule  = pintst;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F36D967;
 Reference = TP3;
 ValeurCmp = PC2;
-IdModule  = SparkFun-PAD.02X.02;
+IdModule  = pintst;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F36D98D;
 Reference = TP4;
 ValeurCmp = PB7;
-IdModule  = SparkFun-PAD.02X.02;
+IdModule  = pintst;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F36D9A5;
 Reference = TP5;
 ValeurCmp = PB0;
-IdModule  = SparkFun-PAD.02X.02;
+IdModule  = pintst;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F36D036;
 Reference = TP6;
 ValeurCmp = TX;
-IdModule  = SparkFun-PAD.02X.02;
+IdModule  = pintst;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F36D05B;
 Reference = TP7;
 ValeurCmp = RX;
-IdModule  = SparkFun-PAD.02X.02;
+IdModule  = pintst;
 EndCmp
 
 BeginCmp
