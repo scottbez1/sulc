@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date Monday, February 13, 2012 03:21:45 PM
+PCBNEW-BOARD Version 1 date Monday, February 13, 2012 05:58:47 PM
 
 # Created by Pcbnew(2011-12-23 BZR 3325)-testing
 
@@ -55,8 +55,8 @@ TextPcbSize 600 800
 EdgeModWidth 945
 TextModSize 600 600
 TextModWidth 120
-PadSize 250 500
-PadDrill 0
+PadSize 1700 1700
+PadDrill 1180
 Pad2MaskClearance 100
 AuxiliaryAxisOrg 0 0
 PcbPlotParams (pcbplotparams (layerselection 284721153) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (pscolor true) (psnegative false) (psa4output false) (plotreference false) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory gerber/))
@@ -417,6 +417,46 @@ uViaDia 200
 uViaDrill 50
 AddNet "N-000013"
 $EndNCLASS
+$MODULE SparkFun-POWER_JACK_PTH
+Po 47700 34500 2700 15 4F39959F 4F380EE7 ~~
+Li SparkFun-POWER_JACK_PTH
+Sc 4F380EE7
+AR /4F36E565
+Op 0 0 0
+At VIRTUAL 
+T0 -1100 -2080 160 160 2700 35 N V 21 N "J1"
+T1 -2000 -2400 394 394 3600 99 N V 21 N "LED_PWR"
+DS 1771 -5393 944 -5393 80 21
+DS -1771 -1181 -1771 -39 80 21
+DS 1771 -39 1771 -1181 80 21
+DS 1771 -39 -1771 -39 80 21
+DS 1771 -1181 1771 -3267 80 21
+DS 1771 -5393 1771 -5118 80 21
+DS -1771 -1181 -1771 -5393 80 21
+DS -1771 -5393 -944 -5393 80 21
+DS -1771 -1181 1771 -1181 80 21
+$PAD
+Sh "GND" C 1700 1700 0 0 2700
+Dr 1180 0 0
+At STD N 00A0FFFF
+Ne 2 "GND"
+Po 0 -3031
+$EndPAD
+$PAD
+Sh "GNDB" C 1700 1700 0 0 2700
+Dr 1180 0 0
+At STD N 00A0FFFF
+Ne 2 "GND"
+Po 1850 -4212
+$EndPAD
+$PAD
+Sh "PWR" C 1700 1700 0 0 2700
+Dr 1180 0 0
+At STD N 00A0FFFF
+Ne 12 "N-000013"
+Po 0 -5393
+$EndPAD
+$EndMODULE  SparkFun-POWER_JACK_PTH
 $MODULE SparkFun-SJ_2S-TRACE
 Po 59200 45800 0 15 4F394C4F 4F380EE5 ~~
 Li SparkFun-SJ_2S-TRACE
@@ -1521,46 +1561,6 @@ Ne 1 "+5V"
 Po 551 0
 $EndPAD
 $EndMODULE  SparkFun-PTC-1206
-$MODULE SparkFun-POWER_JACK_PTH
-Po 47700 34500 2700 15 4F387D92 4F380EE7 ~~
-Li SparkFun-POWER_JACK_PTH
-Sc 4F380EE7
-AR /4F36E565
-Op 0 0 0
-At VIRTUAL 
-T0 -1100 -2080 160 160 2700 35 N V 21 N "J1"
-T1 -2000 -2400 394 394 3600 99 N V 21 N "LED_PWR"
-DS 1771 -5393 944 -5393 80 21
-DS -1771 -1181 -1771 -39 80 21
-DS 1771 -39 1771 -1181 80 21
-DS 1771 -39 -1771 -39 80 21
-DS 1771 -1181 1771 -3267 80 21
-DS 1771 -5393 1771 -5118 80 21
-DS -1771 -1181 -1771 -5393 80 21
-DS -1771 -5393 -944 -5393 80 21
-DS -1771 -1181 1771 -1181 80 21
-$PAD
-Sh "GND" C 1700 1700 0 0 2700
-Dr 1180 0 0
-At STD N 00A88001
-Ne 2 "GND"
-Po 0 -3031
-$EndPAD
-$PAD
-Sh "GNDB" C 1700 1700 0 0 2700
-Dr 1180 0 0
-At STD N 00A88001
-Ne 2 "GND"
-Po 1850 -4212
-$EndPAD
-$PAD
-Sh "PWR" C 1700 1700 0 0 2700
-Dr 1180 0 0
-At STD N 00A88001
-Ne 12 "N-000013"
-Po 0 -5393
-$EndPAD
-$EndMODULE  SparkFun-POWER_JACK_PTH
 $MODULE SparkFun-LED-0603
 Po 49100 46300 2700 15 4F38421C 4F380EF6 ~~
 Li SparkFun-LED-0603
@@ -3857,15 +3857,15 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  tssop-28-thermal
 $TEXTPCB
+Te "LED+"
+Po 57300 33200 394 394 47 0
+De 21 1 0 Normal C
+$EndTEXTPCB
+$TEXTPCB
 Te "Scott Bezek"
 nl "Simple USB LED Controller"
 Po 61700 46600 472 472 47 0
 De 21 1 0 Italic C
-$EndTEXTPCB
-$TEXTPCB
-Te "LED+"
-Po 57300 33200 394 394 47 0
-De 21 1 0 Normal C
 $EndTEXTPCB
 $DRAWSEGMENT
 Po 0 48000 48000 48000 32000 150
