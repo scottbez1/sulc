@@ -1,4 +1,4 @@
-update=Monday, February 13, 2012 11:25:14 PM
+update=Tuesday, February 14, 2012 10:19:56 AM
 version=1
 last_client=pcbnew
 [general]
@@ -108,3 +108,4 @@ LibName12=libs/usb-a-plug
 LibName13=libs/w_smd_dil
 LibName14=libs/tssop-28-thermal
 LibName15=libs/mitHackerMap
+LibName16=libs/Crystals_RevA_09Aug2010

@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le Monday, February 13, 2012 11:06:18 PM
+Cmp-Mod V01 Genere par PcbNew le Tuesday, February 14, 2012 10:20:35 AM
 
 BeginCmp
 TimeStamp = /4F36E5BB;
@@ -347,7 +347,7 @@ BeginCmp
 TimeStamp = /4F35DD00;
 Reference = Y1;
 ValeurCmp = 16MHz;
-IdModule  = SparkFun-HC49UP;
+IdModule  = Crystal_FOX-FE_SMD_RevA_09Aug2010;
 EndCmp
 
 EndListe
