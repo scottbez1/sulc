@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sunday, February 12, 2012 10:45:52 PM
+EESchema Schematic File Version 2  date Monday, February 13, 2012 07:53:14 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -40,7 +40,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title "SULC - Simple USB LED Controller"
-Date "12 feb 2012"
+Date "14 feb 2012"
 Rev ""
 Comp "Scott Bezek (scottbezek.com)"
 Comment1 ""
@@ -1219,6 +1219,7 @@ P 2700 3450
 F 0 "F1" H 2600 3570 50  0000 L BNN
 F 1 "500mA" H 2600 3500 50  0000 L BNN
 F 2 "SparkFun-PTC-1206" H 2700 3600 50  0001 C CNN
+F 4 "NANOSMDC050F/13.2CT-ND" H 2700 3450 60  0001 C CNN "digikey"
 	1    2700 3450
 	1    0    0    -1  
 $EndComp
