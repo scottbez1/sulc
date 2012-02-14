@@ -1,4 +1,4 @@
-update=Sunday, February 12, 2012 07:18:36 PM
+update=Monday, February 13, 2012 09:24:50 PM
 version=1
 last_client=pcbnew
 [general]
@@ -107,3 +107,4 @@ LibName11=libs/SparkFun
 LibName12=libs/usb-a-plug
 LibName13=libs/w_smd_dil
 LibName14=libs/tssop-28-thermal
+LibName15=libs/scottbezekQR
