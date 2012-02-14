@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le Monday, February 13, 2012 03:52:17 AM
+Cmp-Mod V01 Genere par PcbNew le Monday, February 13, 2012 11:06:18 PM
 
 BeginCmp
 TimeStamp = /4F36E5BB;
@@ -106,38 +106,31 @@ IdModule  = SparkFun-USB-MINIB;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F36E616;
+TimeStamp = /4F39CED5;
 Reference = P2;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
+ValeurCmp = LED+;
+IdModule  = pin_array_4x2;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F36E626;
+TimeStamp = /4F39CF5C;
 Reference = P3;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
+ValeurCmp = RED;
+IdModule  = SIL-5;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F36E62B;
+TimeStamp = /4F39CFB2;
 Reference = P4;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
+ValeurCmp = GREEN;
+IdModule  = SIL-5;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F36E62F;
+TimeStamp = /4F39D052;
 Reference = P5;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36E633;
-Reference = P6;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
+ValeurCmp = BLUE;
+IdModule  = SIL-5;
 EndCmp
 
 BeginCmp
@@ -155,41 +148,6 @@ IdModule  = PINTST;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F36DE35;
-Reference = P9;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DE40;
-Reference = P10;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DE43;
-Reference = P11;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DE54;
-Reference = P12;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DE56;
-Reference = P13;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
 TimeStamp = /4F36DF8D;
 Reference = P14;
 ValeurCmp = CONN_1;
@@ -197,78 +155,8 @@ IdModule  = PINTST;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F36DF8C;
-Reference = P15;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DF8B;
-Reference = P16;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DF8A;
-Reference = P17;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DF89;
-Reference = P18;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DF88;
-Reference = P19;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
 TimeStamp = /4F36DFCE;
 Reference = P20;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DFCF;
-Reference = P21;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DFD0;
-Reference = P22;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DFD1;
-Reference = P23;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DFD2;
-Reference = P24;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F36DFD3;
-Reference = P25;
 ValeurCmp = CONN_1;
 IdModule  = PINTST;
 EndCmp
