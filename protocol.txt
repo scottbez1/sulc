@@ -1,0 +1,18 @@
+Some preliminary protocol ideas:
+
+---------------
+Color names:
+red, black, black, blue, magenta\n
+
+---------------
+RGB:
+100, 23, 36; 32, 83, 83; 12, 200, 88; 128, 47, 18; 39, 19, 0\n
+
+---------------
+Hex RGB:
+#000000, #E48800, #BBBBBB, #82C292, #892308\n
+
+---------------
+Efficient RGB:
+(values range from 0-254 since 255 is a sync byte)
+[255][0][r][g][b][r][g][b][r][g][b][r][g][b][r][g][b]\n
