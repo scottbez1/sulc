@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Monday, March 26, 2012 01:05:15 PM
+EESchema Schematic File Version 2  date Monday, March 26, 2012 03:55:15 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -49,62 +49,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 8750 6300 0    40   ~ 0
-L3_5
-Text Label 8750 6000 0    40   ~ 0
-L3_4
-Text Label 8750 5700 0    40   ~ 0
-L3_3
-Text Label 8750 5400 0    40   ~ 0
-L3_2
-Text Label 8750 5100 0    40   ~ 0
-L3_1
-Text Label 8750 4550 0    40   ~ 0
-L2_5
-Text Label 8750 4250 0    40   ~ 0
-L2_4
-Text Label 8750 3950 0    40   ~ 0
-L2_3
-Text Label 8750 3650 0    40   ~ 0
-L2_2
-Text Label 8750 3350 0    40   ~ 0
-L2_1
-Text Label 8750 2750 0    40   ~ 0
-L1_5
-Text Label 8750 2450 0    40   ~ 0
-L1_4
-Text Label 8750 2150 0    40   ~ 0
-L1_3
-Text Label 8750 1850 0    40   ~ 0
-L1_2
-Text Label 8750 1550 0    40   ~ 0
-L1_1
-Text Label 4050 5300 0    40   ~ 0
-RESET
-Text Label 6500 6100 0    40   ~ 0
-SOUT3_MISO
-Text Label 6900 4850 1    40   ~ 0
-SOUT2_SIN3
-Text Label 6900 3050 1    40   ~ 0
-SOUT1_SIN2
-Text Label 6400 3850 1    40   ~ 0
-GSCLK
-Text Label 6500 3850 1    40   ~ 0
-MOSI_SIN
-Text Label 6600 3850 1    40   ~ 0
-SCLK
-Text Label 6700 3850 1    40   ~ 0
-XLAT
-Text Label 6800 3850 1    40   ~ 0
-BLANK
-Text Label 5700 3950 0    60   ~ 0
-XERR1
-Text Label 5700 3850 0    60   ~ 0
-XERR2
-Text Label 5700 3750 0    60   ~ 0
-XERR3
-Text Label 2500 1000 0    60   ~ 0
-LED_PWR
+Wire Wire Line
+	6800 700  6800 650 
 Connection ~ 7200 5500
 Wire Wire Line
 	7400 5400 7200 5400
@@ -373,7 +319,7 @@ Connection ~ 6700 3450
 Wire Wire Line
 	6700 3450 7400 3450
 Wire Wire Line
-	7400 1750 6800 1750
+	6800 1750 7400 1750
 Wire Wire Line
 	7400 1550 6600 1550
 Connection ~ 3600 4050
@@ -439,9 +385,7 @@ Wire Wire Line
 	6600 5100 7400 5100
 Connection ~ 6600 4250
 Wire Wire Line
-	6800 1750 6800 5300
-Wire Wire Line
-	6800 5300 7400 5300
+	7400 5300 6800 5300
 Wire Wire Line
 	3750 4350 3500 4350
 Wire Wire Line
@@ -646,6 +590,83 @@ Wire Wire Line
 Wire Wire Line
 	7250 3650 7400 3650
 Connection ~ 7250 3750
+Wire Wire Line
+	6800 5300 6800 1200
+Connection ~ 6800 1750
+$Comp
+L +5V #PWR?
+U 1 1 4F70C97A
+P 6800 650
+F 0 "#PWR?" H 6800 740 20  0001 C CNN
+F 1 "+5V" H 6800 740 30  0000 C CNN
+	1    6800 650 
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 4F70C961
+P 6800 950
+F 0 "R?" V 6880 950 50  0000 C CNN
+F 1 "10K" V 6800 950 50  0000 C CNN
+	1    6800 950 
+	1    0    0    -1  
+$EndComp
+Text Label 8750 6300 0    40   ~ 0
+L3_5
+Text Label 8750 6000 0    40   ~ 0
+L3_4
+Text Label 8750 5700 0    40   ~ 0
+L3_3
+Text Label 8750 5400 0    40   ~ 0
+L3_2
+Text Label 8750 5100 0    40   ~ 0
+L3_1
+Text Label 8750 4550 0    40   ~ 0
+L2_5
+Text Label 8750 4250 0    40   ~ 0
+L2_4
+Text Label 8750 3950 0    40   ~ 0
+L2_3
+Text Label 8750 3650 0    40   ~ 0
+L2_2
+Text Label 8750 3350 0    40   ~ 0
+L2_1
+Text Label 8750 2750 0    40   ~ 0
+L1_5
+Text Label 8750 2450 0    40   ~ 0
+L1_4
+Text Label 8750 2150 0    40   ~ 0
+L1_3
+Text Label 8750 1850 0    40   ~ 0
+L1_2
+Text Label 8750 1550 0    40   ~ 0
+L1_1
+Text Label 4050 5300 0    40   ~ 0
+RESET
+Text Label 6500 6100 0    40   ~ 0
+SOUT3_MISO
+Text Label 6900 4850 1    40   ~ 0
+SOUT2_SIN3
+Text Label 6900 3050 1    40   ~ 0
+SOUT1_SIN2
+Text Label 6400 3850 1    40   ~ 0
+GSCLK
+Text Label 6500 3850 1    40   ~ 0
+MOSI_SIN
+Text Label 6600 3850 1    40   ~ 0
+SCLK
+Text Label 6700 3850 1    40   ~ 0
+XLAT
+Text Label 6800 3850 1    40   ~ 0
+BLANK
+Text Label 5700 3950 0    60   ~ 0
+XERR1
+Text Label 5700 3850 0    60   ~ 0
+XERR2
+Text Label 5700 3750 0    60   ~ 0
+XERR3
+Text Label 2500 1000 0    60   ~ 0
+LED_PWR
 $Comp
 L TLC5940_TSSOP TLC3
 U 1 1 4F709D4A
