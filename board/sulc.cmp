@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le Tuesday, February 14, 2012 10:20:35 AM
+Cmp-Mod V01 Created by CvPcb (2011-12-23 BZR 3325)-testing date = Monday, March 26, 2012 12:50:06 PM
 
 BeginCmp
 TimeStamp = /4F36E5BB;
@@ -267,23 +267,23 @@ IdModule  = SparkFun-SJ_2S-NO;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F35E983;
+TimeStamp = /4F709D1E;
 Reference = TLC1;
-ValeurCmp = TLC5940;
+ValeurCmp = TLC5940_TSSOP;
 IdModule  = tssop-28-thermal;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F35E97B;
+TimeStamp = /4F709D40;
 Reference = TLC2;
-ValeurCmp = TLC5940;
+ValeurCmp = TLC5940_TSSOP;
 IdModule  = tssop-28-thermal;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F35E4C5;
+TimeStamp = /4F709D4A;
 Reference = TLC3;
-ValeurCmp = TLC5940;
+ValeurCmp = TLC5940_TSSOP;
 IdModule  = tssop-28-thermal;
 EndCmp
 
