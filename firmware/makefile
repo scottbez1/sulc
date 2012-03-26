@@ -61,8 +61,8 @@
 
 # MCU name
 MCU = at90usb162
-
 PROGRAMMER_MCU = atmega32u2
+
 
 # Target architecture (see library "Board Types" documentation).
 ARCH = AVR8
@@ -107,7 +107,7 @@ FORMAT = ihex
 
 
 # Target file name (without extension).
-TARGET = test
+TARGET = main
 
 
 # Object files directory
@@ -116,8 +116,27 @@ TARGET = test
 OBJDIR = .
 
 
+# Path to the LUFA library
+LUFA_PATH = lufa-lib/trunk
+
+
+# LUFA library compile-time options and predefined tokens
+LUFA_OPTS  = -D USB_DEVICE_ONLY
+LUFA_OPTS += -D FIXED_CONTROL_ENDPOINT_SIZE=8
+LUFA_OPTS += -D FIXED_NUM_CONFIGURATIONS=1
+LUFA_OPTS += -D USE_FLASH_DESCRIPTORS
+LUFA_OPTS += -D USE_STATIC_OPTIONS="(USB_DEVICE_OPT_FULLSPEED | USB_OPT_REG_ENABLED | USB_OPT_AUTO_PLL)"
+
+
+# Create the LUFA source path variables by including the LUFA root makefile
+include $(LUFA_PATH)/LUFA/makefile
+
+
 # List C source files here. (C dependencies are automatically generated.)
-SRC = $(TARGET).c                                                 
+SRC = $(TARGET).c                                                 \
+	  Descriptors.c                                               \
+	  $(LUFA_SRC_USB)                                             \
+	  $(LUFA_SRC_USBCLASS)
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
@@ -151,7 +170,7 @@ DEBUG = dwarf-2
 #     Each directory must be seperated by a space.
 #     Use forward slashes for directory separators.
 #     For a directory that has spaces, enclose it in quotes.
-EXTRAINCDIRS = 
+EXTRAINCDIRS = $(LUFA_PATH)/
 
 
 # Compiler flag to set the C Standard level.
@@ -166,17 +185,20 @@ CSTANDARD = -std=c99
 CDEFS  = -DF_CPU=$(F_CPU)UL
 CDEFS += -DF_USB=$(F_USB)UL
 CDEFS += -DBOARD=BOARD_$(BOARD) -DARCH=ARCH_$(ARCH)
+CDEFS += $(LUFA_OPTS)
 
 
 # Place -D or -U options here for ASM sources
 ADEFS  = -DF_CPU=$(F_CPU)
 ADEFS += -DF_USB=$(F_USB)UL
 ADEFS += -DBOARD=BOARD_$(BOARD)
+ADEFS += $(LUFA_OPTS)
 
 # Place -D or -U options here for C++ sources
 CPPDEFS  = -DF_CPU=$(F_CPU)UL
 CPPDEFS += -DF_USB=$(F_USB)UL
 CPPDEFS += -DBOARD=BOARD_$(BOARD)
+CPPDEFS += $(LUFA_OPTS)
 #CPPDEFS += -D__STDC_LIMIT_MACROS
 #CPPDEFS += -D__STDC_CONSTANT_MACROS
 
@@ -316,18 +338,14 @@ LDFLAGS += $(PRINTF_LIB) $(SCANF_LIB) $(MATH_LIB)
 
 #---------------- Programming Options (avrdude) ----------------
 
-AVR_ROOT := /usr
-AVR_INC := ${AVR_ROOT}/avr-4/
-AVR := ${AVR_ROOT}/bin/avr
-
 # Programming hardware
 # Type: avrdude -c ?
 # to get a full listing.
 #
-AVRDUDE_PROGRAMMER = avr109
+AVRDUDE_PROGRAMMER = jtagmkII
 
 # com1 = serial port. Use lpt1 to connect to parallel port.
-AVRDUDE_PORT = /dev/tty.usbmodem1d11
+AVRDUDE_PORT = usb
 
 AVRDUDE_WRITE_FLASH = -U flash:w:$(TARGET).hex
 #AVRDUDE_WRITE_EEPROM = -U eeprom:w:$(TARGET).eep
@@ -346,9 +364,8 @@ AVRDUDE_WRITE_FLASH = -U flash:w:$(TARGET).hex
 # reports about avrdude. See <http://savannah.nongnu.org/projects/avrdude>
 # to submit bug reports.
 #AVRDUDE_VERBOSE = -v -v
-AVRDUDE_CONFIG = /etc/avrdude.conf
 
-AVRDUDE_FLAGS = -p $(PROGRAMMER_MCU) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER) -C $(AVRDUDE_CONFIG)
+AVRDUDE_FLAGS = -p $(MCU) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER)
 AVRDUDE_FLAGS += $(AVRDUDE_NO_VERIFY)
 AVRDUDE_FLAGS += $(AVRDUDE_VERBOSE)
 AVRDUDE_FLAGS += $(AVRDUDE_ERASE_COUNTER)
@@ -389,13 +406,13 @@ DEBUG_HOST = localhost
 
 # Define programs and commands.
 SHELL = sh
-CC = ${AVR}-gcc
-OBJCOPY = ${AVR}-objcopy
-OBJDUMP = ${AVR}-objdump
-SIZE = ${AVR}-size
-AR = ${AVR}-ar rcs
-NM = ${AVR}-nm
-AVRDUDE = ${AVR}dude
+CC = avr-gcc
+OBJCOPY = avr-objcopy
+OBJDUMP = avr-objdump
+SIZE = avr-size
+AR = avr-ar rcs
+NM = avr-nm
+AVRDUDE = avrdude
 REMOVE = rm -f
 REMOVEDIR = rm -rf
 COPY = cp
@@ -678,12 +695,23 @@ clean_list :
 	$(REMOVEDIR) .dep
 
 doxygen:
-	@echo Generating Project Documentation...
-	@doxygen Doxygen.conf
+	@echo Generating Project Documentation \($(TARGET)\)...
+	@if ( doxygen Doxygen.conf 2>&1 | grep ": warning:" ;); then \
+	  exit 1; \
+	fi;
 	@echo Documentation Generation Complete.
 
 clean_doxygen:
 	rm -rf Documentation
+
+checksource:
+	@for f in $(SRC) $(CPPSRC) $(ASRC); do \
+		if [ -f $$f ]; then \
+			echo "Found Source File: $$f" ; \
+		else \
+			echo "Source File Not Found: $$f" ; \
+		fi; done 
+
 
 # Create object files directory
 $(shell mkdir $(OBJDIR) 2>/dev/null)
@@ -697,5 +725,4 @@ $(shell mkdir $(OBJDIR) 2>/dev/null)
 .PHONY : all begin finish end sizebefore sizeafter gccversion \
 build elf hex eep lss sym coff extcoff doxygen clean          \
 clean_list clean_doxygen program dfu flip flip-ee dfu-ee      \
-debug gdb-config
-
+debug gdb-config checksource
