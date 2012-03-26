@@ -23,25 +23,22 @@
 */
 
 
-#ifndef _MAIN_H_
-#define _MAIN_H_
 
-    #include <avr/io.h>
-    #include <avr/wdt.h>
-    #include <avr/power.h>
-    #include <avr/interrupt.h>
-    #include <string.h>
-    #include <stdio.h>
-    #include "Descriptors.h"
-    #include <LUFA/Version.h>
-    #include <LUFA/Drivers/USB/USB.h>
-    #include "dbg.h"
+#ifndef _DBG_H_
+#define _DBG_H_
 
-    void SetupHardware(void);
+#include <avr/io.h>
 
-    void EVENT_USB_Device_Connect(void);
-    void EVENT_USB_Device_Disconnect(void);
-    void EVENT_USB_Device_ConfigurationChanged(void);
-    void EVENT_USB_Device_ControlRequest(void);
+#define DBG_DDR DDRD
+#define DBG_PORT PORTD
+#define DBG_0 _BV(1)
+#define DBG_1 _BV(4)
+#define DBG_2 _BV(5)
+#define DBG_3 _BV(6)
+
+
+void initDbg(void);
+void setDbg(uint8_t val);
+
+
 #endif
-

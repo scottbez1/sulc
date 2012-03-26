@@ -46,31 +46,6 @@ USB_ClassInfo_CDC_Device_t VirtualSerial_CDC_Interface =
 
 static FILE USBSerialStream;
 
-
-#define DBG_DDR DDRD
-#define DBG_PORT PORTD
-#define DBG_0 _BV(1)
-#define DBG_1 _BV(4)
-#define DBG_2 _BV(5)
-#define DBG_3 _BV(6)
-
-void initDbg() {
-    DBG_DDR  |=   DBG_0 | DBG_1 | DBG_2 | DBG_3;
-    DBG_PORT &= ~(DBG_0 | DBG_1 | DBG_2 | DBG_3);
-}
-
-/** Set the debug LEDs with the lower nibble of val
- */
-void setDbg(uint8_t val) {
-    uint8_t oldPort = DBG_PORT;
-    oldPort &= ~(DBG_0 | DBG_1 | DBG_2 | DBG_3);
-    if (val & _BV(0)) { oldPort |= DBG_0; }
-    if (val & _BV(1)) { oldPort |= DBG_1; }
-    if (val & _BV(2)) { oldPort |= DBG_2; }
-    if (val & _BV(3)) { oldPort |= DBG_3; }
-    DBG_PORT = oldPort;
-}
-
 int main(void)
 {
 	SetupHardware();
