@@ -1,0 +1,12 @@
+*.bak
+*.bck
+*.000
+*.dsn
+*.ses
+gerber/*.gbl
+gerber/*.gbo
+gerber/*.gbs
+gerber/*.gtl
+gerber/*.gto
+gerber/*.gts
+gerber/*.txt
