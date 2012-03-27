@@ -136,6 +136,9 @@ include $(LUFA_PATH)/LUFA/makefile
 SRC = $(TARGET).c                                                 \
 	  Descriptors.c                                               \
       dbg.c                                                       \
+      tlc5940/Tlc5940.c                                           \
+      led.c                                                       \
+      parse.c                                                     \
 	  $(LUFA_SRC_USB)                                             \
 	  $(LUFA_SRC_USBCLASS)
 

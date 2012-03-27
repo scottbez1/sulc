@@ -23,6 +23,10 @@
 */
 
 #include "main.h"
+#include "util.h"
+#include "tlc5940/Tlc5940.h"
+#include "led.h"
+#include "parse.h"
 
 USB_ClassInfo_CDC_Device_t VirtualSerial_CDC_Interface =
 	{
@@ -58,13 +62,13 @@ int main(void)
 	for (;;)
 	{
         if (CDC_Device_BytesReceived(&VirtualSerial_CDC_Interface) > 0) {
-		    uint8_t b = CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
-            if (b == 'a') {
-                setDbg(0xF);
-            } else if (b == 'b') {
-                setDbg(0);
+		    uint8_t c = CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
+            int8_t r = parseChar(c);
+            if (r < 0) {
+                panic(0-r);
             }
         }
+        Tlc5940_update();
 
 		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
 		USB_USBTask();
@@ -80,6 +84,9 @@ void SetupHardware(void)
 
 	/* Disable clock division */
 	clock_prescale_set(clock_div_1);
+
+    Tlc5940_init(0);
+    Tlc5940_clear();
 
 	/* Hardware Initialization */
 	USB_Init();
