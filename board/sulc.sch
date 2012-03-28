@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Monday, March 26, 2012 03:55:15 PM
+EESchema Schematic File Version 2  date Wednesday, March 28, 2012 02:14:53 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -41,7 +41,7 @@ $Descr User 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "SULC - Simple USB LED Controller"
-Date "26 mar 2012"
+Date "28 mar 2012"
 Rev ""
 Comp "Scott Bezek (scottbezek.com)"
 Comment1 ""
@@ -49,6 +49,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 1350 6650
+Wire Wire Line
+	1350 6650 1450 6650
+Connection ~ 1350 6450
+Wire Wire Line
+	1350 6450 1450 6450
 Wire Wire Line
 	6800 700  6800 650 
 Connection ~ 7200 5500
@@ -593,6 +599,60 @@ Connection ~ 7250 3750
 Wire Wire Line
 	6800 5300 6800 1200
 Connection ~ 6800 1750
+Wire Wire Line
+	1350 6800 1350 6350
+Wire Wire Line
+	1350 6350 1450 6350
+Wire Wire Line
+	1350 6550 1450 6550
+Connection ~ 1350 6550
+$Comp
+L CONN_1 P?
+U 1 1 4F73550B
+P 1600 6650
+F 0 "P?" H 1680 6650 40  0000 L CNN
+F 1 "CONN_1" H 1600 6705 30  0001 C CNN
+	1    1600 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P?
+U 1 1 4F735505
+P 1600 6550
+F 0 "P?" H 1680 6550 40  0000 L CNN
+F 1 "CONN_1" H 1600 6605 30  0001 C CNN
+	1    1600 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P?
+U 1 1 4F735502
+P 1600 6450
+F 0 "P?" H 1680 6450 40  0000 L CNN
+F 1 "CONN_1" H 1600 6505 30  0001 C CNN
+	1    1600 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P?
+U 1 1 4F7354F5
+P 1600 6350
+F 0 "P?" H 1680 6350 40  0000 L CNN
+F 1 "CONN_1" H 1600 6405 30  0001 C CNN
+	1    1600 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F7354EA
+P 1350 6800
+F 0 "#PWR?" H 1350 6800 30  0001 C CNN
+F 1 "GND" H 1350 6730 30  0001 C CNN
+	1    1350 6800
+	1    0    0    -1  
+$EndComp
+Text Notes 1350 6200 0    60   ~ 0
+PCB Mounting Holes
 $Comp
 L +5V #PWR?
 U 1 1 4F70C97A

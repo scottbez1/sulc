@@ -1,10 +1,10 @@
-Cmp-Mod V01 Created by CvPcb (2011-12-23 BZR 3325)-testing date = Monday, March 26, 2012 04:00:33 PM
+Cmp-Mod V01 Genere par PcbNew le Wednesday, March 28, 2012 02:41:37 PM
 
 BeginCmp
 TimeStamp = /4F36E5BB;
 Reference = C1;
 ValeurCmp = 100uF;
-IdModule  = C1V7;
+IdModule  = C1V8;
 EndCmp
 
 BeginCmp
@@ -134,6 +134,13 @@ IdModule  = SIL-5;
 EndCmp
 
 BeginCmp
+TimeStamp = /4F7354F5;
+Reference = P6;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
 TimeStamp = /4F36D9C4;
 Reference = P7;
 ValeurCmp = ISP;
@@ -145,6 +152,27 @@ TimeStamp = /4F36DE12;
 Reference = P8;
 ValeurCmp = CONN_1;
 IdModule  = PINTST;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F735502;
+Reference = P9;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F735505;
+Reference = P10;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F73550B;
+Reference = P11;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
 EndCmp
 
 BeginCmp

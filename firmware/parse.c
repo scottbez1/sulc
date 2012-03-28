@@ -84,6 +84,10 @@ static int8_t idleParseChar(char c) {
     if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) {
         setState(S_NAME);
         return R_OK;
+    } else if (c == ' ') {
+        // ignore whitespace
+        buf_idx--;
+        return R_OK;
     } else if (c == '\n' || c == '\r') {
         buf_idx = 0;
         cur_led = 0;
