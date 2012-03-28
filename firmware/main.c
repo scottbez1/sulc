@@ -65,7 +65,10 @@ int main(void)
 		    uint8_t c = CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
             int8_t r = parseChar(c);
             if (r < 0) {
-                panic(0-r);
+                setDbg(8 | (0-r));
+            } else {
+                // TODO: do something better with these dbg values...
+                setDbg(3)
             }
         }
         Tlc5940_update();

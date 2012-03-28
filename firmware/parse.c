@@ -31,9 +31,10 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include "dbg.h"
+#include "util.h"
 
 
-#define BUF_SIZE 200
+#define BUF_SIZE 80
 
 #define S_IDLE 0
 #define S_NAME 1
@@ -118,7 +119,6 @@ static int8_t nameLookup(void) {
         return R_OK;
     }
 
-
     // check for special name "all"
     if (cur_led == 0 && buf_idx == 3 && buf[0]=='a' && buf[1]=='l' && buf[2]=='l') {
         fl_all = true;
@@ -127,16 +127,21 @@ static int8_t nameLookup(void) {
 
     // loop through colors to find a match
     uint8_t found = 0;
+    uint16_t name_start_idx = 0;
     for (int i = 0; i < NUM_COLORS; i++) {
+        uint8_t name_len = pgm_read_byte(&colors[i].name_len);
+
         // skip color if name lengths don't match
-        if (buf_idx != colors[i].name_len) {
+        if (buf_idx != name_len) {
+            name_start_idx += name_len;
             continue;
         }
 
         // check all letters in the name
         uint8_t match = 1;
-        for (int j = 0; j < buf_idx; j++) {
-            if (buf[j] != colors[i].name[j]) {
+        for (uint8_t j = 0; j < name_len; j++) {
+            char c = pgm_read_byte(COLOR_NAMES + name_start_idx + j);
+            if (buf[j] != c) {
                 match = 0;
                 break;
             }
@@ -144,9 +149,14 @@ static int8_t nameLookup(void) {
 
         if (match) {
             found = 1;
-            setCurLed(colors[i].r, colors[i].g, colors[i].b);
+            uint8_t r = pgm_read_byte(&colors[i].r);
+            uint8_t g = pgm_read_byte(&colors[i].g);
+            uint8_t b = pgm_read_byte(&colors[i].b);
+            setCurLed(r,g,b);
             break;
         }
+
+        name_start_idx += name_len;
     }
 
     if (found) {

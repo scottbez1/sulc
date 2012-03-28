@@ -22,35 +22,25 @@
     along with SULC.  If not, see <http://www.gnu.org/licenses/>
 */
 
+#include "util.h"
 
 
+void panic(uint8_t value) {
+    setDbg(15);
+    Tlc5940_clear();
+    for (int i = 0; i < 500; i++) {
+        Tlc5940_update();
+        _delay_ms(1);
+    }
+    cli();
 
-#include "led.h"
-#include "tlc5940/Tlc5940.h"
-
-
-uint16_t rgb_buf[48];
-
-void ledSetRGB(uint8_t led, uint8_t r, uint8_t g, uint8_t b) {
-	if (led >= NUM_LEDS) {
-		panic(0);
-	}
-    // TODO: fixme
-    rgb_buf[16*led + 1] = r*16;
-    rgb_buf[16*led + 2] = r*16;
-    rgb_buf[16*led + 3] = r*16;
-
-    rgb_buf[16*led + 4] = g*16;
-    rgb_buf[16*led + 5] = g*16;
-    rgb_buf[16*led + 6] = g*16;
-
-    rgb_buf[16*led + 7] = b*16;
-    rgb_buf[16*led + 8] = b*16;
-    rgb_buf[16*led + 9] = b*16;
-}
-
-void ledFlush() {
-    for (int i = 0; i < 48; i++) {
-        Tlc5940_set(i, rgb_buf[i]);
+    // only care about lower 3 bits
+    value = value & 7;
+    while (1) {
+        setDbg(value);
+        _delay_ms(100);
+        setDbg(value | 8);
+        _delay_ms(100);
     }
 }
+

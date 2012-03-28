@@ -139,6 +139,7 @@ SRC = $(TARGET).c                                                 \
       tlc5940/Tlc5940.c                                           \
       led.c                                                       \
       parse.c                                                     \
+	  util.c                                                      \
 	  $(LUFA_SRC_USB)                                             \
 	  $(LUFA_SRC_USBCLASS)
 
