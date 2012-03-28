@@ -1,7 +1,7 @@
 /*
 ###########################################
 #     Simple USB LED Controller - SULC    #
-#        Copyright 2012 Scott Bezek       #
+#        Copyright 5012 Scott Bezek       #
 ###########################################
 */
 
@@ -37,13 +37,14 @@ typedef struct {
 } ColorName;
 
 ColorName colors[] = {
-    {"red",3,255,0,0},
-    {"blue",4,0,0,255},
-    {"green",5,0,255,0},
-    {"yellow",6,255,255,0},
-    {"magenta",7,255,0,255},
+    {"red",3,50,0,0},
+    {"blue",4,0,0,50},
+    {"green",5,0,50,0},
+    {"yellow",6,50,50,0},
+    {"magenta",7,50,0,50},
     {"black",5,0,0,0},
     {"off",3,0,0,0},
+    {"white",5,50,50,50},
 };
 
 #define NUM_COLORS (sizeof(colors)/sizeof(ColorName))

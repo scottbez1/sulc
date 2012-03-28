@@ -48,7 +48,7 @@ USB_ClassInfo_CDC_Device_t VirtualSerial_CDC_Interface =
 			},
 	};
 
-static FILE USBSerialStream;
+FILE USBSerialStream;
 
 int main(void)
 {
