@@ -68,7 +68,7 @@ int main(void)
                 setDbg(8 | (0-r));
             } else {
                 // TODO: do something better with these dbg values...
-                setDbg(3)
+                setDbg(3);
             }
         }
         Tlc5940_update();
