@@ -39,6 +39,7 @@
 #define S_IDLE 0
 #define S_NAME 1
 #define S_DECIMAL_RGB 2
+#define S_BYTE 3
 
 
 #include <stdio.h>
@@ -63,9 +64,25 @@ bool fl_all = false;
 uint8_t decimal_rgb_cur_color = 0;
 uint8_t decimal_rgb[3] = {0,0,0};
 
+// mode of byte-based input
+#define BYTE_MODE_NONE -1
+#define BYTE_MODE_INDIV_RGB 0
+#define BYTE_MODE_MAX 0
+int8_t byte_mode = BYTE_MODE_NONE;
+
 static inline void setState(uint8_t new_state) {
     state = new_state;
 }
+
+static inline void resetIdle() {
+    setState(S_IDLE);
+    buf_idx = 0;
+    cur_led = 0;
+    fl_all = false;
+    decimal_rgb_cur_color = 0;
+    byte_mode = BYTE_MODE_NONE;
+}
+ 
 
 
 // sets the current led (or _all_ leds if fl_all is set) to (r,g,b)
@@ -101,6 +118,9 @@ static int8_t idleParseChar(char c) {
         return R_OK;
     } else if (c >= '0' && c <= '9') {
         setState(S_DECIMAL_RGB);
+        return R_OK;
+    } else if (c == 255) {
+        setState(S_BYTE);
         return R_OK;
     } else {
         // TODO
@@ -171,10 +191,7 @@ static int8_t nameParseChar(char c) {
         buf_idx--;
 
         int8_t r = nameLookup();
-        setState(S_IDLE);
-        buf_idx = 0;
-        cur_led = 0;
-        fl_all = 0;
+        resetIdle();
         ledFlush();
         return r;
     }
@@ -244,19 +261,11 @@ static int8_t decimalParseChar(char c) {
 
         // if this rgb triple is incomplete, ignore it and go to IDLE
         if (decimal_rgb_cur_color < 2) {
-            setState(S_IDLE);
-            buf_idx = 0;
-            cur_led = 0;
-            fl_all = 0;
-            decimal_rgb_cur_color = 0;
+            resetIdle();
             ledFlush();
         }
         int8_t r = decimalParseVal();
-        setState(S_IDLE);
-        buf_idx = 0;
-        cur_led = 0;
-        fl_all = 0;
-        decimal_rgb_cur_color = 0;
+        resetIdle();
         ledFlush();
         return r;
     }
@@ -303,6 +312,48 @@ static int8_t decimalParseChar(char c) {
 }
 
 
+static int8_t byteParseChar(char c) {
+    if (c == 255) {
+        buf_idx = 0;
+        cur_led = 0;
+        byte_mode = BYTE_MODE_NONE;
+        return R_OK;
+    }
+    
+    if (cur_led >= NUM_LEDS) {
+        // entered too many colors, so just ignore this
+        return R_OK;
+    }
+
+
+    if (byte_mode == BYTE_MODE_NONE && buf_idx == 1) {
+        if (buf[0] <= BYTE_MODE_MAX) {
+            byte_mode = buf[0];
+            buf_idx = 0;
+            return R_OK;
+        } else {
+            resetIdle();
+            return E_BAD_CHAR;
+        }
+    }
+
+
+    setDbg(cur_led);
+
+    if (buf_idx == 3) {
+        setCurLed(buf[0], buf[1], buf[2]);
+        cur_led++;
+        buf_idx = 0;
+        if (cur_led >= NUM_LEDS) {
+            ledFlush();
+            resetIdle();
+            return;
+        }
+    }
+
+    return R_OK;
+}
+
 
 int8_t parseChar(char c) {
     if (buf_idx < BUF_SIZE) {
@@ -311,10 +362,7 @@ int8_t parseChar(char c) {
     } else {
         // buffer is full, wait for newline
         if (c == '\n') {
-            setState(S_IDLE);
-            buf_idx = 0;
-            cur_led = 0;
-            fl_all = false;
+            resetIdle();
         }
         return R_OK;
     }
@@ -334,6 +382,8 @@ int8_t parseChar(char c) {
             return nameParseChar(c);
         case S_DECIMAL_RGB:
             return decimalParseChar(c);
+        case S_BYTE:
+            return byteParseChar(c);
         default:
             return E_UNKNOWN_STATE;
     }

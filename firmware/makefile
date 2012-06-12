@@ -532,8 +532,10 @@ flip: $(TARGET).hex
 dfu: $(TARGET).hex
 	dfu-programmer $(PROGRAMMER_MCU) erase
 	dfu-programmer $(PROGRAMMER_MCU) flash $(TARGET).hex
-	dfu-programmer $(PROGRAMMER_MCU) reset
-	dfu-programmer $(PROGRAMMER_MCU) reset
+	@echo "Done programming, resetting board..."
+	@dfu-programmer $(PROGRAMMER_MCU) reset || true
+	@dfu-programmer $(PROGRAMMER_MCU) reset > /dev/null 2>&1 || true
+	@echo "Done."
 
 flip-ee: $(TARGET).hex $(TARGET).eep
 	$(COPY) $(TARGET).eep $(TARGET)eep.hex
